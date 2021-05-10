@@ -33,8 +33,8 @@ namespace Task04
 
         public override string ToString()
         {
-            string nonsense = string.Format("{0:f2}", Gradus);
-            string output = nonsense.Substring(0, nonsense.IndexOf(',')) + ',' + nonsense.Substring(nonsense.IndexOf(',') + 1);
+            string output = string.Format("{0:f2}", Gradus);
+            output = output.Replace('.', ',');
             return output;
         }
     }
@@ -47,8 +47,8 @@ namespace Task04
 
         public override string ToString()
         {
-            string nonsense = string.Format("{0:f2}", Gradus);
-            string output = nonsense.Substring(0, nonsense.IndexOf(',')) + ',' + nonsense.Substring(nonsense.IndexOf(',') + 1);
+            string output = string.Format("{0:f2}", Gradus);
+            output = output.Replace('.', ',');
             return output;
         }
     }
