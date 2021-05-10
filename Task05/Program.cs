@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 /*
 Источник: https://metanit.com/
@@ -40,7 +41,7 @@ namespace Task05
 
         public override string ToString()
         {
-            string nonsense = string.Format("{0:0,00}", Sum);
+            string nonsense = string.Format("{0:f2}", Sum);
             string output = nonsense.Substring(0, nonsense.IndexOf(',')) + ',' + nonsense.Substring(nonsense.IndexOf(',') + 1);
             return output;
         }
@@ -58,7 +59,7 @@ namespace Task05
         }
         public override string ToString()
         {
-            string nonsense = string.Format("{0:0,00}", Sum);
+            string nonsense = string.Format("{0:f2}", Sum);
             string output = nonsense.Substring(0, nonsense.IndexOf(',')) + ',' + nonsense.Substring(nonsense.IndexOf(',') + 1);
             return output;
         }
@@ -68,6 +69,7 @@ namespace Task05
     {
         public static void Main(string[] args)
         {
+            CultureInfo.CurrentCulture = new CultureInfo("ru - RU");
             try
             {
                 Dollar dollar = new Dollar { Sum = decimal.Parse(Console.ReadLine()) };

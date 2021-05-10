@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Globalization;
 
 /*
 Источник: https://metanit.com/
@@ -32,7 +33,7 @@ namespace Task04
 
         public override string ToString()
         {
-            string nonsense = string.Format("{0:0,00}", Gradus);
+            string nonsense = string.Format("{0:f2}", Gradus);
             string output = nonsense.Substring(0, nonsense.IndexOf(',')) + ',' + nonsense.Substring(nonsense.IndexOf(',') + 1);
             return output;
         }
@@ -46,7 +47,7 @@ namespace Task04
 
         public override string ToString()
         {
-            string nonsense = string.Format("{0:0,00}", Gradus);
+            string nonsense = string.Format("{0:f2}", Gradus);
             string output = nonsense.Substring(0, nonsense.IndexOf(',')) + ',' + nonsense.Substring(nonsense.IndexOf(',') + 1);
             return output;
         }
@@ -56,6 +57,7 @@ namespace Task04
     {
         public static void Main(string[] args)
         {
+            CultureInfo.CurrentCulture = new CultureInfo("ru - RU");
             Fahrenheit farenheit = new Fahrenheit { Gradus = double.Parse(Console.ReadLine()) };
             Celcius celcius = new Celcius { Gradus = double.Parse(Console.ReadLine()) };
             Console.WriteLine((Celcius)farenheit);
