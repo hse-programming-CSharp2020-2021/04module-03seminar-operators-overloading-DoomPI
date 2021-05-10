@@ -40,7 +40,7 @@ namespace Task05
 
         public override string ToString()
         {
-            string nonsense = string.Format("{0:f2}", Sum);
+            string nonsense = string.Format("{0:0,00}", Sum);
             string output = nonsense.Substring(0, nonsense.IndexOf(',')) + ',' + nonsense.Substring(nonsense.IndexOf(',') + 1);
             return output;
         }
@@ -58,7 +58,7 @@ namespace Task05
         }
         public override string ToString()
         {
-            string nonsense = string.Format("{0:f2}", Sum);
+            string nonsense = string.Format("{0:0,00}", Sum);
             string output = nonsense.Substring(0, nonsense.IndexOf(',')) + ',' + nonsense.Substring(nonsense.IndexOf(',') + 1);
             return output;
         }
