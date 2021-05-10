@@ -32,7 +32,7 @@ namespace Task04
 
         public override string ToString()
         {
-            return string.Format("{0,00}", Gradus);
+            return string.Format("{0:f2}", Gradus);
         }
     }
 
@@ -44,7 +44,7 @@ namespace Task04
 
         public override string ToString()
         {
-            return string.Format("{0,00}", Gradus);
+            return string.Format("{0:f2}", Gradus);
         }
     }
 

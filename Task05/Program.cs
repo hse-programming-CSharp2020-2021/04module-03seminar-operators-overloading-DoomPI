@@ -40,7 +40,7 @@ namespace Task05
 
         public override string ToString()
         {
-            return String.Format("{0,00}", Sum);
+            return string.Format("{0:f2}", Sum);
         }
     }
     class Euro
@@ -56,7 +56,7 @@ namespace Task05
         }
         public override string ToString()
         {
-            return String.Format("{0,00}", Sum);
+            return string.Format("{0:f2}", Sum);
         }
     }
 
